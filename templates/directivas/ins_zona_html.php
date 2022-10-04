@@ -21,7 +21,7 @@ class ins_zona_html extends html_controler {
         $modelo = new ins_zona($link);
 
         $select = $this->select_catalogo(cols:$cols,con_registros:$con_registros,id_selected:$id_selected, filtro: $filtro,
-            modelo: $modelo, label: 'Tipo Solicitud', name: 'ins_zona_id', disabled:$disabled, required: $required);
+            modelo: $modelo, label: 'Zona', name: 'ins_zona_id', disabled:$disabled, required: $required);
         if(errores::$error){
             return $this->error->error(mensaje: 'Error al generar select', data: $select);
         }

@@ -3,6 +3,7 @@ namespace html;
 
 use gamboamartin\errores\errores;
 use gamboamartin\system\html_controler;
+use gamboamartin\template_1\directivas;
 use models\ins_tipo_zona;
 use PDO;
 
@@ -21,7 +22,7 @@ class ins_tipo_zona_html extends html_controler {
         $modelo = new ins_tipo_zona($link);
 
         $select = $this->select_catalogo(cols:$cols,con_registros:$con_registros,id_selected:$id_selected, filtro: $filtro,
-            modelo: $modelo, label: 'Tipo Solicitud', name: 'ins_tipo_zona_id', disabled:$disabled, required: $required);
+            modelo: $modelo, label: 'Tipo Zona', name: 'ins_tipo_zona_id', disabled:$disabled, required: $required);
         if(errores::$error){
             return $this->error->error(mensaje: 'Error al generar select', data: $select);
         }
