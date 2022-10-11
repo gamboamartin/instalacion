@@ -44,7 +44,6 @@ class controlador_ins_cuadrilla extends system {
             return $this->retorno_error(mensaje: 'Error al generar select', data: $select, header: $header, ws: $ws);
         }
 
-        print_r($select); exit();
 
         $this->inputs->select = new stdClass();
 
